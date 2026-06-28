@@ -186,6 +186,12 @@ app.get('/', (req, res) => {
 </html>`);
 });
 
+// GET /version - Plugin update checker
+app.get('/version', (req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.send('2.0-SNAPSHOT');
+});
+
 // POST /verify
 app.post('/verify', async (req, res) => {
   try {
